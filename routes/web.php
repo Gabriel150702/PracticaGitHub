@@ -20,3 +20,6 @@ Route::get('/', function () {
 
 Route::get('practica7', [controladorVistas::class,'showPractica'])->name('apodoPractica7');
 Route::get('Inicio', [controladorVistas::class,'showInicio'])->name('apodoInicio');
+
+Route::post('GuardarNombre', [controladorVistas::class,'procesarNombre'])->name('GuardarNom');
+

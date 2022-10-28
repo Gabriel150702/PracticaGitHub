@@ -9,6 +9,8 @@
     <title>PRACTICA 7 GITHUB</title>
 </head>
 <body>
+    <form action="{{route ('GuardarNom')}}" method="post">
+        @csrf
 <div class="card">
   <div class="card-header">
     Featured
@@ -19,15 +21,18 @@
 
     <div class="mb-3">
   <label for="formGroupExampleInput" class="form-label">NOMBRE</label>
-  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="NOMBRE(S)">
+  <input type="text" class="form-control"  placeholder="NOMBRE(S)" name="txtNombre">
+  {{ $errors->first('txtNombre') }}
 </div>
 <div class="mb-3">
   <label for="formGroupExampleInput2" class="form-label">APELLIDO</label>
-  <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="APELLLIDO PATERNO Y MATERNO">
+  <input type="text" class="form-control"  placeholder="APELLLIDO PATERNO Y MATERNO" name="txtApellido">
+  {{ $errors->first('txtApellido') }}
 </div>
-    <a href="practica7" class="btn btn-primary">TABLA</a>
+    <button class="btn btn-primary" type="submit">TABLA</button>
   </div>
 </div>
+</form>
 
 
     
